@@ -74,7 +74,8 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'announcement.wsgi.application'
-
+LOGIN_REDIRECT_URL = 'webapp:list_announcement'
+LOGOUT_REDIRECT_URL = 'accounts:login'
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
