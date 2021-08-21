@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+<img src="{{ announcement.photo.url }}">
+<h2>{{ announcement.title }}</h2>
+<br>
+<p>{{ announcement.descriptions }}</p>
+{% if announcement.price %}
+<p>Цена: {{ announcement.price }} с</p>
+{% else %}
+<p>Цена: Договорная</p>
+{% endif %}
+<br>
+{% if announcement.moderate %}
+<p>Данное обяьвление еще не прошло модерацию.</p>
+{% endif %}
+<br>
+<h6>Пользователь данного обьявления:</h6>
+<a href="{% url 'accounts:user_detail' announcement.user.id %}">{{ announcement.user }}</a>
+{% endblock %}
+
+{% block menu %}
+          <li class="nav-item">
+              <a href="{% url 'webapp:update_announcement' announcement.id %}" class="nav-link active" aria-current="page">Edit</a>
+          </li>
+          <li class="nav-item">
+              <a href="{% url 'webapp:delete_announcement' announcement.id %}" class="nav-link active" aria-current="page">Delete</a>
+          </li>
+{% endblock %}

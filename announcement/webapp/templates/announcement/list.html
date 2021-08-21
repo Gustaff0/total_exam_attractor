@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block content %}
+{% if not announcements %}
+<h1>К сожалению Обьявления отсутсвуют!</h1>
+{% endif %}
+{% for announcement in announcements %}
+<br>
+<div class="card bg-secondary" style="width: 18rem;">
+  <img src="{{ announcement.photo.url }}" class="card-img-top" alt="photo">
+  <div class="card-body">
+    <h5 class="card-title">{{ announcement.title }}</h5>
+    <p class="card-text">{{ announcement.description }}</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">{{ announcement.category }}</li>
+    {% if announcement.price %}
+    <li class="list-group-item text-success">Цена: {{ announcement.price }} с</li>
+    {% else %}
+    <li class="list-group-item">Цена: Договорная</li>
+    {% endif %}
+  </ul>
+  <div class="card-body">
+    <a href="{% url 'webapp:detail_announcement' announcement.id %}" class="card-link text-light bg-dark">View</a>
+  </div>
+</div>
+{% endfor %}
+{% endblock %}
+
+{% block menu %}
+{% if user.is_authenticated %}
+  <li class="nav-item">
+      <a href="{% url 'webapp:create_announcement' %}" class="nav-link active" aria-current="page">CreateAnnouncement</a>
+  </li>
+{% endif %}
+{% endblock %}
