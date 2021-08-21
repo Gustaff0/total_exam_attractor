@@ -1,0 +1,283 @@
+[
+{
+  "model": "webapp.announcement",
+  "pk": 2,
+  "fields": {
+    "user": 1,
+    "title": "dfgh56565",
+    "descriptions": "sdfghjkl;lkjhgfdsasdfghj",
+    "created_at": "2021-08-21T05:25:06.016Z",
+    "edited_at": "2021-08-21T08:49:58.084Z",
+    "moderated_at": null,
+    "moderate": false,
+    "category": "phones",
+    "photo": "announcement_pics/sherif-zombi.jpg",
+    "price": "400.00",
+    "delete": true
+  }
+},
+{
+  "model": "webapp.announcement",
+  "pk": 3,
+  "fields": {
+    "user": 1,
+    "title": "CowBoy",
+    "descriptions": "sdfghjklkjhgfdfghjklkjhgfd",
+    "created_at": "2021-08-21T06:25:05.537Z",
+    "edited_at": "2021-08-21T08:51:57.949Z",
+    "moderated_at": "2021-08-21T08:49:51.356Z",
+    "moderate": true,
+    "category": "other",
+    "photo": "announcement_pics/sherif-zombi_rK7xub7.jpg",
+    "price": "400.00",
+    "delete": true
+  }
+},
+{
+  "model": "webapp.announcement",
+  "pk": 4,
+  "fields": {
+    "user": 2,
+    "title": "Cowww",
+    "descriptions": "gfhgkhdshsgfjghjghj",
+    "created_at": "2021-08-21T08:55:13.114Z",
+    "edited_at": "2021-08-21T08:57:34.911Z",
+    "moderated_at": "2021-08-21T08:57:34.910Z",
+    "moderate": true,
+    "category": "other",
+    "photo": "announcement_pics/wallpapersden.com_programming-coding-language_1280x720.jpg",
+    "price": "500.00",
+    "delete": false
+  }
+},
+{
+  "model": "webapp.announcement",
+  "pk": 5,
+  "fields": {
+    "user": 3,
+    "title": "LOliiii",
+    "descriptions": "sdfghjklkjhgfdfghjklkjhgfd",
+    "created_at": "2021-08-21T08:55:35.257Z",
+    "edited_at": "2021-08-21T08:57:33.925Z",
+    "moderated_at": "2021-08-21T08:57:33.924Z",
+    "moderate": true,
+    "category": "other",
+    "photo": "announcement_pics/байт-матрицы-кода-бинарных-данных-rian-запуск-абстрактная-фон-в-темно-_oRM4PJS.jpg",
+    "price": "400.00",
+    "delete": false
+  }
+},
+{
+  "model": "webapp.announcement",
+  "pk": 6,
+  "fields": {
+    "user": 1,
+    "title": "Code coding",
+    "descriptions": "dfghjklkjhgfdsdfghjklkjhgfds",
+    "created_at": "2021-08-21T10:02:14.158Z",
+    "edited_at": "2021-08-21T10:05:33.152Z",
+    "moderated_at": "2021-08-21T10:05:33.152Z",
+    "moderate": true,
+    "category": "electronic",
+    "photo": "announcement_pics/Снимок_экрана_от_2021-02-15_12-09-13.png",
+    "price": "5000.00",
+    "delete": false
+  }
+},
+{
+  "model": "webapp.announcement",
+  "pk": 7,
+  "fields": {
+    "user": 1,
+    "title": "Code coding",
+    "descriptions": "dfghjklkjhgfdsdfghjklkjhgfds",
+    "created_at": "2021-08-21T10:02:30.215Z",
+    "edited_at": "2021-08-21T10:04:59.592Z",
+    "moderated_at": null,
+    "moderate": false,
+    "category": "electronic",
+    "photo": "announcement_pics/Снимок_экрана_от_2021-03-27_21-06-30.png",
+    "price": "5000.00",
+    "delete": true
+  }
+},
+{
+  "model": "webapp.announcement",
+  "pk": 8,
+  "fields": {
+    "user": 1,
+    "title": "dfghjkldfghjklhgfd",
+    "descriptions": "sdfghjkhgfdsdfghjkhgfd",
+    "created_at": "2021-08-21T10:02:59.750Z",
+    "edited_at": "2021-08-21T10:04:56.345Z",
+    "moderated_at": null,
+    "moderate": false,
+    "category": "electronic",
+    "photo": "announcement_pics/Снимок_экрана_от_2021-02-14_20-11-26.png",
+    "price": "5000.00",
+    "delete": true
+  }
+},
+{
+  "model": "webapp.announcement",
+  "pk": 9,
+  "fields": {
+    "user": 2,
+    "title": "GAbarite",
+    "descriptions": "fhhgfghfhggfhgfhgfh",
+    "created_at": "2021-08-21T12:16:06.295Z",
+    "edited_at": "2021-08-21T12:16:46.152Z",
+    "moderated_at": null,
+    "moderate": false,
+    "category": "other",
+    "photo": "announcement_pics/Снимок_экрана_от_2021-03-28_18-32-16.png",
+    "price": "456.00",
+    "delete": true
+  }
+},
+{
+  "model": "webapp.announcement",
+  "pk": 10,
+  "fields": {
+    "user": 2,
+    "title": "GAbarite",
+    "descriptions": "fhhgfghfhggfhgfhgfh",
+    "created_at": "2021-08-21T12:16:09.484Z",
+    "edited_at": "2021-08-21T12:16:50.034Z",
+    "moderated_at": "2021-08-21T12:16:33.690Z",
+    "moderate": true,
+    "category": "other",
+    "photo": "announcement_pics/Снимок_экрана_от_2021-03-28_18-32-16_Egwqm0x.png",
+    "price": "456.00",
+    "delete": true
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$260000$SpWNj6Itrde8IFr7bwOD7Q$y+1/uN1Ou0nc+1jplyT/QLw9ux0B4WWcD45ewmZlXTY=",
+    "last_login": "2021-08-21T10:32:16.034Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2021-08-21T05:14:47.570Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$260000$xu92AbEYYyMHiQqQv35Pvc$zHDPCXuUp0SDc1Ty64EFFUjz6bpgQgPJSbofppK7/5Q=",
+    "last_login": "2021-08-21T10:53:12.181Z",
+    "is_superuser": false,
+    "username": "bars",
+    "first_name": "bars",
+    "last_name": "bars",
+    "email": "bars@df.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2021-08-21T05:28:32Z",
+    "groups": [],
+    "user_permissions": [
+      33
+    ]
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 3,
+  "fields": {
+    "password": "pbkdf2_sha256$260000$UdlW17K2phPuLAXWuiZwpf$FQ4S65bEv6xbN3/SJO5P7lWl23iW9t1hXB9CF6swCTQ=",
+    "last_login": "2021-08-21T05:29:34.907Z",
+    "is_superuser": false,
+    "username": "bars1",
+    "first_name": "bars1",
+    "last_name": "bars1",
+    "email": "bars1@gfgf.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2021-08-21T05:29:34.663Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 4,
+  "fields": {
+    "password": "pbkdf2_sha256$260000$0AAjYjnulgAAgh0h3wHxPM$J/XuTncbW9JBnZ8r0nMVP3uar+HUQCkCvnQmGR+PSX4=",
+    "last_login": "2021-08-21T10:06:11.446Z",
+    "is_superuser": false,
+    "username": "hoiw",
+    "first_name": "hoiw",
+    "last_name": "hoiw",
+    "email": "hoiw@fffg.ru",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2021-08-21T10:06:11.221Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 5,
+  "fields": {
+    "password": "pbkdf2_sha256$260000$CcJ1widpS3BazkgShKUys4$OB1yHwbwahC5X+0hC0LVr5tH70WX4V1qjS+BBX/7NS8=",
+    "last_login": "2021-08-21T10:07:22.838Z",
+    "is_superuser": false,
+    "username": "hoiw1",
+    "first_name": "hoiw1",
+    "last_name": "hoiw1",
+    "email": "hoiw1@fffg.ru",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2021-08-21T10:07:22.603Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 6,
+  "fields": {
+    "password": "pbkdf2_sha256$260000$8sK7dmxK6OjTj63cdIRGEI$XFVqGJMfS8koEE9qHp5CkNN03hG+uUHmF/LXNL7uXN0=",
+    "last_login": "2021-08-21T10:08:28.645Z",
+    "is_superuser": false,
+    "username": "hoiw2",
+    "first_name": "hoiw2",
+    "last_name": "hoiw2",
+    "email": "hoiw2@fffg.ru",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2021-08-21T10:08:27.902Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 7,
+  "fields": {
+    "password": "pbkdf2_sha256$260000$ePoZ2iRUArEPXHvXCVR4Jh$6gnWl9IYtvSotUzm3KHhvYDWfX40ZZX5HuyXZoGO0Ao=",
+    "last_login": "2021-08-21T10:52:57.341Z",
+    "is_superuser": false,
+    "username": "UserName",
+    "first_name": "UserName",
+    "last_name": "UserName",
+    "email": "UserName@mail.cpm",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2021-08-21T10:09:13.921Z",
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]

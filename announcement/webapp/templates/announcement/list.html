@@ -2,6 +2,9 @@
 {% block content %}
 {% if not announcements %}
 <h1>К сожалению Обьявления отсутсвуют!</h1>
+{% else %}
+<br>
+{% include "partial/search_form.html" %}
 {% endif %}
 {% for announcement in announcements %}
 <br>
