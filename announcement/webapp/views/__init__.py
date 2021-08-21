@@ -1,0 +1,1 @@
+from webapp.views.announcement import AnnouncementListView, AnnouncementCreateView, AnnouncementUpdateView, AnnouncementDetailView, announcement_delete_view
