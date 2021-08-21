@@ -26,3 +26,14 @@ class Announcement(models.Model):
         verbose_name_plural = 'Обьявления'
 
 
+class Comment(models.Model):
+    comment = models.CharField(max_length=300, null=False, blank=False, validators=[MinLengthValidator(5)])
+    announcement = models.ForeignKey('webapp.Announcement', blank=False, null=False, on_delete=models.CASCADE, related_name='comment')
+    user = models.ForeignKey(get_user_model(), blank=False, null=False, related_name='comment', on_delete=models.CASCADE)
+
+    class Meta:
+        db_table = 'Comments'
+        verbose_name = 'Комментарий'
+        verbose_name_plural = 'Комментарии'
+
+

@@ -16,7 +16,23 @@
 {% endif %}
 <br>
 <h6>Пользователь данного обьявления:</h6>
-<a href="{% url 'accounts:user_detail' announcement.user.id %}">{{ announcement.user }}</a>
+<br>
+<a class="text-light bg-dark" href="{% url 'accounts:user_detail' announcement.user.id %}">{{ announcement.user }}</a>
+<br>
+<h6>Комментарии:</h6>
+{% if not announcement.comment.all %}
+<p>Нету Комментаривев</p>
+{% endif %}
+{% for comment in announcement.comment.all %}
+<div class="card">
+  <h5 class="card-header">{{ comment.user.username }}</h5>
+  <div class="card-body">
+    <h5 class="card-title">Comment:</h5>
+    <p class="card-text">{{ comment.comment }}</p>
+  </div>
+</div>
+{% endfor %}
+{% include 'comment/create.html' %}
 {% endblock %}
 
 {% block menu %}
