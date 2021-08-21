@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% block content %}
+{% if not announcements %}
+<h1>К сожалению Обьявления для модерации отсутсвуют!</h1>
+{% endif %}
+{% for announcement in announcements %}
+<br>
+<div id="{{ announcement.id }}" class="card bg-secondary" style="width: 18rem;">
+  <img src="{{ announcement.photo.url }}" class="card-img-top" alt="photo">
+  <div class="card-body">
+    <h5 class="card-title">{{ announcement.title }}</h5>
+    <p class="card-text">{{ announcement.description }}</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">{{ announcement.category }}</li>
+    {% if announcement.price %}
+    <li class="list-group-item text-success">Цена: {{ announcement.price }} с</li>
+    {% else %}
+    <li class="list-group-item">Цена: Договорная</li>
+    {% endif %}
+  </ul>
+  <div class="card-body">
+    <a href="{% url 'webapp:detail_announcement' announcement.id %}" class="card-link text-light bg-dark">View</a>
+    <button type="button" onclick="AddModerate(event)" data-url="{% url 'api_v1:success_moderate' %}" data-announcement="{{ announcement.id }}">ConfirmModerating</button>
+    <button type="button" onclick="DontAddModerate(event)" data-url="{% url 'api_v1:reject_moderate' %}" data-announcement="{{ announcement.id }}">Reject</button>
+  </div>
+</div>
+{% endfor %}
+
+<script>
+function getCookie(name) {
+      if (!document.cookie) {
+        return null;
+      }
+      const xsrfCookies = document.cookie.split(';')
+        .map(c => c.trim())
+        .filter(c => c.startsWith(name + '='));
+
+      if (xsrfCookies.length === 0) {
+        return null;
+      }
+      return decodeURIComponent(xsrfCookies[0].split('=')[1]);
+    }
+
+    async function AddModerate(event) {
+    event.preventDefault()
+    let button = event.target
+    const csrfToken = getCookie('csrftoken');
+    const headers = new Headers({
+      'Content-Type': 'x-www-form-urlencoded',
+       'X-CSRFToken' : csrfToken
+       });
+    let url = button.dataset.url
+    let announcement_id = button.dataset.announcement
+    let given_obj = document.getElementById(`${announcement_id}`)
+    let response = await fetch(url, {method: 'POST', headers, body: JSON.stringify({'id': announcement_id})})
+    given_obj.remove()
+    }
+
+    async function DontAddModerate(event) {
+    event.preventDefault()
+      const csrfToken = getCookie('csrftoken');
+    const headers = new Headers({
+      'Content-Type': 'x-www-form-urlencoded',
+       'X-CSRFToken' : csrfToken
+       });
+    let button = event.target
+    let url = button.dataset.url
+    let announcement_id = button.dataset.announcement
+      let given_obj = document.getElementById(`${announcement_id}`)
+      let response = await fetch(url, {method: 'POST', headers, body: JSON.stringify({'id': announcement_id})})
+      given_obj.remove()
+    }
+
+</script>
+{% endblock %}

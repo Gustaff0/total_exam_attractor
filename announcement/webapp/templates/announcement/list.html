@@ -21,6 +21,9 @@
   </ul>
   <div class="card-body">
     <a href="{% url 'webapp:detail_announcement' announcement.id %}" class="card-link text-light bg-dark">View</a>
+    {% if user == announcement.user or perm.webapp.moderator or user.is_staff %}
+    <a href="{% url 'webapp:update_announcement' announcement.id %}" class="card-link text-light bg-dark">Update</a>
+    {% endif %}
   </div>
 </div>
 {% endfor %}

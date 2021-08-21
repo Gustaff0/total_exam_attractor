@@ -17,8 +17,10 @@ class Announcement(models.Model):
     category = models.CharField(max_length=100, null=False, blank=False, choices=CHOICES, default='other')
     photo = models.ImageField(null=True, blank=True, upload_to='announcement_pics')
     price = models.DecimalField(max_digits=20, decimal_places=2, null=True, blank=True)
+    delete = models.BooleanField(default=False)
 
     class Meta:
+        permissions = [('moderator', 'Модератор')]
         db_table = 'Announcements'
         verbose_name = 'Обьявление'
         verbose_name_plural = 'Обьявления'

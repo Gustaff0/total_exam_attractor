@@ -24,6 +24,11 @@
           <li class="nav-item">
               <a href="{% url 'accounts:user_detail' user.id %}" class="nav-link active">{{ user.username }}</a>
           </li>
+          {% if perms.webapp.moderator %}
+          <li class="nav-item">
+              <a href="{% url 'webapp:list_to_moderator' %}" class="nav-link active">AnnouncementForModerate</a>
+          </li>
+          {% endif %}
        {% else %}
           <li class="nav-item">
               <a href="{% url 'accounts:login' %}?next={{ request.get_full_path }}" class="nav-link active" aria-current="page">Вход</a>
