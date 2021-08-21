@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block title %}Пользователь{% endblock %}
+{% block content %}
+    <h1>Личная страница пользователя {{ user_obj.get_full_name|default:user_obj.username }}</h1>
+    <p>Имя пользователя: {{ user_obj.username }}</p>
+    <p>Имя: {{ user_obj.first_name }}</p>
+    <p>Фамилия: {{ user_obj.last_name }}</p>
+    <p>Дата рождения: {{ user_obj.profile.birth_date|date:'d.m.Y' }}</p>
+ <p>Почта: {{ user_obj.email }}</p>
+<br>
+<h2>Обьявления:</h2>
+{% for announcement in user_obj.announcement.all %}
+{% if announcement.moderate or announcement.user == user %}
+<br>
+<div class="card bg-secondary" style="width: 18rem;">
+  <img src="{{ announcement.photo.url }}" class="card-img-top" alt="photo">
+  <div class="card-body">
+    <h5 class="card-title">{{ announcement.title }}</h5>
+    <p class="card-text">{{ announcement.description }}</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">{{ announcement.category }}</li>
+    {% if announcement.price %}
+    <li class="list-group-item text-success">Цена: {{ announcement.price }} с</li>
+    {% else %}
+    <li class="list-group-item">Цена: Договорная</li>
+    {% endif %}
+  </ul>
+  <div class="card-body">
+    <a href="{% url 'webapp:detail_announcement' announcement.id %}" class="card-link text-light bg-dark">View</a>
+  </div>
+</div>
+{% endif %}
+{% endfor %}
+
+{% endblock %}
